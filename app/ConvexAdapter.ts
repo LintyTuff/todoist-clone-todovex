@@ -117,6 +117,7 @@ export const ConvexAdapter: Adapter = {
     });
   },
   async updateUser(user: User) {
+    // @ts-ignore
     await callMutation(api.authAdapter.updateUser, { user: toDB(user) });
     return user;
   },
